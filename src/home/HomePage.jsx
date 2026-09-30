@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import heroFood from "../asset/hero-food.png";
+const heroFood = "/images/hero-food.png";
 
 const categories = [
     {
