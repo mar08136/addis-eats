@@ -39,7 +39,7 @@ function MenuPage() {
 
         const data = await response.json();
         await new Promise((resolve) =>
-          setTimeout(resolve, 2000)
+          setTimeout(resolve, 500)
         );
 
         setDishes(data);

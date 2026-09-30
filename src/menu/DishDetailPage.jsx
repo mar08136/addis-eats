@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useCart } from "../cart/CartContext";
+
 function DishDetailPage() {
   const { id } = useParams();
   const { addToCart } = useCart();
+
   const [dish, setDish] = useState(null);
+  const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -37,6 +40,20 @@ function DishDetailPage() {
 
     getDish();
   }, [id]);
+
+  function increaseQuantity() {
+    setQuantity((currentQuantity) => currentQuantity + 1);
+  }
+
+  function decreaseQuantity() {
+    setQuantity((currentQuantity) =>
+      Math.max(1, currentQuantity - 1)
+    );
+  }
+
+  function handleAddToCart() {
+    addToCart(dish, quantity);
+  }
 
   if (loading) {
     return <p>Loading dish...</p>;
@@ -95,14 +112,21 @@ function DishDetailPage() {
           </div>
 
           <div className="quantity-section">
-            <button>-</button>
+            <button onClick={decreaseQuantity}>
+              -
+            </button>
 
-            <span>1</span>
+            <span>{quantity}</span>
 
-            <button>+</button>
+            <button onClick={increaseQuantity}>
+              +
+            </button>
           </div>
 
-          <button className="detail-add-button">
+          <button
+            className="detail-add-button"
+            onClick={handleAddToCart}
+          >
             Add to Cart
           </button>
         </div>
