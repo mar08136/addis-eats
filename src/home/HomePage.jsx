@@ -5,33 +5,32 @@ const categories = [
     {
         name: "Fast Food",
         category: "fast-food",
-        image: "/src/asset/fast-food.png",
+        image: "/images/fast-food.png",
     },
     {
         name: "Chicken & Fish",
         category: "chicken-fish",
-        image: "/src/asset/chicken & fish.png",
+        image: "/images/chicken & fish.png",
     },
     {
         name: "Sweets",
         category: "sweets",
-        image: "/src/asset/sweets.png",
+        image: "/images/sweets.png",
     },
     {
         name: "Breakfast",
         category: "breakfast",
-        
-        image: "/src/asset/break-fast.png",
+        image: "/images/break-fast.png",
     },
     {
         name: "Drinks",
         category: "drinks",
-        image: "/src/asset/drinks.png",
+        image: "/images/drinks.png",
     },
     {
         name: "Traditional Food",
         category: "traditional-food",
-        image: "/src/asset/traditionalfood.png",
+        image: "/images/traditionalfood.png",
     },
 ];
 
@@ -176,7 +175,7 @@ function HomePage() {
                         className="popular-card"
                     >
                         <img
-                            src="/src/asset/fast-food.png"
+                            src="/images/fast-food.png"
                             alt="Fast food"
                         />
 
@@ -200,7 +199,7 @@ function HomePage() {
                         className="popular-card"
                     >
                         <img
-                            src="/src/asset/chicken & fish.png"
+                            src="/images/chicken & fish.png"
                             alt="Chicken and fish"
                         />
 
@@ -224,7 +223,7 @@ function HomePage() {
                         className="popular-card"
                     >
                         <img
-                            src="/src/asset/sweets.png"
+                            src="/images/sweets.png"
                             alt="Sweets"
                         />
 
@@ -248,7 +247,7 @@ function HomePage() {
                         className="popular-card"
                     >
                         <img
-                            src="/src/asset/traditionalfood.png"
+                            src="/images/traditionalfood.png"
                             alt="Traditional Ethiopian food"
                         />
 
@@ -272,7 +271,7 @@ function HomePage() {
             <section className="about-section">
                 <div className="about-image">
                     <img
-                        src="/src/asset/traditionalfood.png"
+                        src="/images/traditionalfood.png"
                         alt="Traditional Ethiopian food"
                     />
                 </div>
